@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding-top: 50px;
+            background-image: url('azul.jpg');
+            background-size: 20%;
+            color: white;
+            font-family: 'Exo', sans-serif;
+        }
+
+        .header,
+        .footer {
+            background-image: url('rojo.jpg');
+            background-size: contain;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header {
+            height: 80px;
+            top: 0;
+            border-bottom: 5px solid white;
+        }
+
+        .footer {
+            height: 40px;
+            bottom: 0;
+            border-top: 5px solid white;
+        }
+
+        .content {
+            margin-top: 80px;
+            margin-bottom: 80px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .login-form {
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            margin-top: 120px;
+        }
+
+        .login-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-userinput {
+            margin-bottom: 18px;
+        }
+
+        .login-button {
+            margin-top: 25px;
+        }
+
+        .login-options {
+            margin-bottom: 0px;
+        }
+
+        .login-forgot {
+            float: right;
+        }
+
+        .login-button span {
+            margin-right: 5px;
+        }
+
+        .login-image-container {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .login-image {
+            max-width: 10px;
+            height: auto;
+            flex: 0 0 auto;
+        }
+
+        .login-image img {
+            width: 250%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .login-text {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: black;
+            margin-left: 20px;
+        }
+
+        .footer-text {
+            text-align: center;
+            color: gray;
+            margin-top: 10px;
+        }
+
+        /* Nueva clase para la segunda línea */
+        .second-line {
+            margin-left: -10px; /* Ajusta el margen lateral según tus necesidades */
+            margin-right: -10px; /* Ajusta el margen lateral según tus necesidades */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header"></div>
+
+    <div class="container login-form content">
+        <!-- Contenido del formulario -->
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form action="index1.html">
+                    <div class="login-image-container">
+                        <div class="login-image">
+                            <img src="Logo_Umsa.jpg" alt="Foto">
+                        </div>
+                        <div class="login-text">CARRERA DE INFORMATICA</div>
+                    </div>
+                    <div class="input-group login-userinput">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                        <input id="txtUser" type="text" class="form-control" name="Usuario" placeholder="Username">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                        <input id="txtPassword" type="password" class="form-control" name="Password" placeholder="Password">
+                        <span id="showPassword" class="input-group-btn">
+                            <button class="btn btn-default reveal" type="button"><i class="glyphicon glyphicon-eye-open"></i></button>
+                        </span>
+                    </div>
+                    <button class="btn btn-primary btn-block login-button" type="submit">
+                        <span>INGRESAR</span> <i class="fa fa-sign-in"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-text">
+            <p>Web 3.0 - Sistema de Seguimiento Academico</p>
+            <p class="second-line">La Division de Sistemas de Información y Estadistica tiene derechos de propiedad intelectuales relacionados con la tecnología
+                utilizada en el desarrollo del Software S.S.A, por tanto toda copia no autorizada sera sancionado bajo las normas de propiedad
+                 de la Universidad Mayor de San Andrés UMSA y las leyes establecidas en nuestro país</p>
+            
+        </div>
+    </div>
+
+    <div class="footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        window.onload = function () {
+            $("#showPassword").hide();
+        }
+
+        $("#txtPassword").on('change', function () {
+            if ($("#txtPassword").val()) {
+                $("#showPassword").show();
+            } else {
+                $("#showPassword").hide();
+            }
+        });
+
+        $(".reveal").on('click', function () {
+            var $pwd = $("#txtPassword");
+            if ($pwd.attr('type') === 'password') {
+                $pwd.attr('type', 'text');
+            } else {
+                $pwd.attr('type', 'password');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
+
+

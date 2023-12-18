@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: repeating-linear-gradient(-60deg, #e0e0e0, #e0e0e0 2px, #ffffff 2px, #ffffff 4px);
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* Cambia el color de fondo de la barra de navegación a azul y las letras a blanco */
+        .navbar-custom {
+            background-color: rgb(24, 59, 90);
+            position: relative;
+        }
+
+        .navbar-custom::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            z-index: 1;
+        }
+
+        .navbar-custom .container-fluid {
+            position: relative;
+            z-index: 2;
+        }
+
+        .navbar-custom .navbar-brand {
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar-custom .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .navbar-custom .navbar-toggler-icon {
+            background-color: rgb(24, 59, 90);
+        }
+
+        /* Estilo para las subopciones del menú desplegable */
+        .navbar-custom .dropdown-menu-custom {
+            background-color: rgb(24, 59, 90);
+            z-index: 0;
+        }
+
+        /* Color de texto blanco para las subopciones */
+        .navbar-custom .dropdown-menu-custom a {
+            color: rgb(0, 179, 9);
+        }
+
+        /* Estilo al hacer clic en una opción del menú desplegable */
+        .navbar-custom .dropdown-menu-custom a:hover {
+            color: black;
+            background-color: transparent !important;
+        }
+
+        /* Elimina el margen en las subopciones del menú desplegable */
+        .navbar-custom .dropdown-menu-custom {
+            margin: 0;
+            border: none;
+        }
+
+        /* Elimina el cuadro que rodea las subopciones al desplegarse */
+        .navbar-custom .nav-item.dropdown:hover .dropdown-menu-custom {
+            display: block;
+        }
+        h1 {
+        margin: 0;
+        font-size: 14px; /* Ajusta esta propiedad para cambiar el tamaño del texto */
+        text-align: left;
+        }
+    </style>
+    <title>Navbar Personalizado</title>
+</head>
+
+<body>
+    
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">S.S.A.</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li><hr class="dropdown-divider"></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Mis documentos
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index2.html">&#128193; Historial Academico</a></li>
+                            <li><a class="dropdown-item" href="index3.html">&#128193; Record Academico</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Administracion Personal
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index4.html">&#128221; Actualizar datos</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Inscripciones
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index4.html">Inscripcion Materias</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Seguridad
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index4.html">&#128274; Cambiar Contraseña</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            &#128100; ALAN EDUARDO SARAVIA LOPEZ
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index4.html">&#128100; Estudiante</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html">&#8594;] Salir</a></li>
+                            
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <!-- Imagen siempre pegada a la izquierda -->
+                <img src="HA.jpeg" alt="Imagen Izquierda" style="width: 370px; height: 280px;">
+                
+                <!-- Botón de descarga -->
+                <a href="generarHA.pdf" download>
+                    <button class="btn btn-success" style="margin-left: 10px;">
+                        圎 Descargar Documento
+                    </button>
+                </a>
+                
+                <!-- Otras dos imágenes pegadas a la izquierda, una encima de otra -->
+                
+                <img src="NUEVAHA2.jpeg" alt="Otra Imagen 2" style="width: 800px; height: 220px; margin-left: px;">
+                <img src="NUEVAHA.jpg" alt="Otra Imagen 1" style="width: 880px; height: 270px; margin-left: 0px;">
+                <img src="NUEVAHA1.jpeg" alt="Otra Imagen 2" style="width: 790px; height: 110px; margin-left: px;">
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
